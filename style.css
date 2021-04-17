@@ -14,7 +14,7 @@
 }
 
 .container {
-    background-color: lightsalmon;
+    background-color: grey;
     border-radius: 5px;
     padding: 10px;
     width: 800px;
@@ -29,7 +29,7 @@
 
 .btn {
     border: 1px solid cornflowerblue;
-    background-color: grey;
+    background-color: lightsalmon;
     border-radius: 5px;
     padding: 5px 10px;
     color: white;
