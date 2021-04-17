@@ -14,7 +14,7 @@
 }
 
 .container {
-    background-color: grey;
+    background-color: lightgray;
     border-radius: 5px;
     padding: 10px;
     width: 800px;
@@ -32,9 +32,31 @@
     background-color: lightsalmon;
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color: black;
 }
 
 .btn:hover {
     border-color: black;
+}
+
+.start-btn, .next-btn, .submit-btn {
+    font-size: large;
+    font-weight: bold;
+    padding: 20px 70px;
+}
+
+.hide {
+    display: none;
+}
+
+.choices {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.time {
+    border: 1px black;
+    background-color: lightsalmon;
+    font-weight: bold;
 }
