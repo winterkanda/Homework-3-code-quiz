@@ -6,10 +6,29 @@ var questions = [
     },
 
     {
-        title: "Question 2: Arrays in Javascript can be used to store ________.",
-        choices: ["numbers & strings", "other arrays", "booleans", "all of the above"], 
-        correct: "all of the above"
+        title: "Question 2: Commonly used datatypes do NOT include: ",
+        choices: ["strings", "alerts", "booleans", "numbers"], 
+        correct: "alerts"
+    },
+
+    {
+        title: "Question 3: A very useful tool during the development and debugging for printing content is to the debugger is: ",
+        choices: ["javascript", "for loops", "console.log", "terminal/bash"], 
+        correct: "for loops"
+    },
+
+    {
+        title: "Question 4: The condition in an if/else statement is enclosed by a -  ",
+        choices: ["quotes", "curly brackets", "square brackets", "parenthesis"], 
+        correct: "parenthesis"
+    },
+
+    {
+        title: "Question 5: String values must be enclosed in ________ when being assigned to variables.",
+        choices: ["curly brackets", "quotes", "paranthesis", "commas"], 
+        correct: "quotes"
     }
+
 ]
     
 

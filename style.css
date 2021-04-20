@@ -135,14 +135,44 @@ button {
     color:hsl(0, 0%, 0%);
 }
 
-.choices {
-    align-items: center;
-    justify-content: center;
+/*results and scores*/
+#results {
+    flex-direction: column;
+    padding: 60px 20px 30px 30px;
     display: flex;
 }
 
-.time {
-    border: 1px black;
-    background-color: lightsalmon;
-    font-weight: bold;
+/*high score section*/
+#high_scores {
+    display: flex;
+    padding: 60px 20px 30px 30px;
+    flex-direction: column;
+    align-items: center; 
 }
+
+#list_scores {
+    font-weight: bolder;
+}
+
+li:nth-child(even) {
+    background-color: rgba(226, 43, 226, 0.308);
+}
+
+li:nth-child(odd) {
+    background-color: rgba(226, 43, 226, 0.308);
+}
+
+/* media query */
+@media (max-width: 690px) {
+    .btn {
+        font-size: 1rem;
+        margin: 18px 0px 0px 0px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 500px) (
+    .btn {
+        font-size: 0.9rem;
+    }
+)
