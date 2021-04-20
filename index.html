@@ -8,16 +8,34 @@
 </head>
 
 <body>
+
+    <!--view high scores and the timer-->
+    <div id="timer">Time:</div>
+    <div id="view_high_score">View High Scores</div>
+
+    <!--how the quiz looks like, instructions, etc-->
     <div class= "container">
 
-    
-            <button id="start-btn" class="start-btn">Start</button>
-    
+        <header>
+            <h1>Coding Quiz Challenge</h1>
+        </header>
 
+        <p>
+            Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+        </p>
+
+    
+            <button id="start-btn" class="start-btn">Start Quiz</button>
+    
+        
+            <!--the questions of the quiz-->
         <div id="questionsCon" class="hide">
             <div id="question">Question</div>
             <div>Time Remaining <span id="time">02:00</span></div>
+
             <div>Score<span id='score'></span></div>
+
+            <!--answer buttons to the-->
             <div id="answer-buttons" class="btn-grid">
                 <button id="answer-1" class='btn'>Answer 1</button>
                 <button id="answer-2" class='btn'>Answer 2</button>
