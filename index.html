@@ -24,16 +24,14 @@
             Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
         </p>
 
-    
-            <button id="start-btn" class="start-btn">Start Quiz</button>
-    
+        <!--start quiz button-->
+        <button id="start-btn" class="start-btn">Start Quiz</button>
+    </div>
         
-            <!--the questions of the quiz-->
+        <!--the questions of the quiz-->
         <div id="questionsCon" class="hide">
             <div id="question">Question</div>
-            <div>Time Remaining <span id="time">02:00</span></div>
-
-            <div>Score<span id='score'></span></div>
+            
 
             <!--answer buttons to the-->
             <div id="answer-buttons" class="btn-grid">
@@ -42,14 +40,27 @@
                 <button id="answer-3" class='btn'>Answer 3</button>
                 <button id="answer-4" class='btn'>Answer 4</button>
             </div>
-        </div>
-    
 
-        <div id="choices">
-            <button id="submit-btn" class="submit-btn btn hide">Submit</button>
+            <!--final results, or score of the quiz-->
+            <div id="results" class = "hide">
+                <div>All done! Great job!</div>
+                <div id="final_score"></div>
+                <p><strong>Enter Initials:</strong>
+                    <input type="text" id="initials" name="player_initials" placeholder="initials here please" />
+                    <button id="submit">Submit</button>
+                </p>
+            </div>
+
         </div>
-    </div>
     
+        <!--High scores section-->
+        <div id="high_scores" class="hide">
+            <div>High Scores</div>
+            <ol id="list_scores"></ol>
+            <button id="go_back">Go Back</button>
+            <button id="clear">Clear High Scores</button>
+        </div>
+       
     <script src="./script.js"></script>
 </body>
 
