@@ -1,3 +1,4 @@
+// variable arrays for questions //
 var questions = [
     {
         title: "Question 1: Arrays in Javascript can be used to store ________.",
@@ -58,4 +59,6 @@ function generateQuestion(index) {
 
     var btn4= document.getElementById("answer-4");
     btn4.textContent = questions[index].choices[3];
+
+    
 }
