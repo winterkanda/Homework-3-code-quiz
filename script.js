@@ -1,3 +1,6 @@
+// variable elements //
+
+
 // variable arrays for questions //
 var questions = [
     {
@@ -30,9 +33,9 @@ var questions = [
         correct: "quotes"
     }
 
-]
+];
     
-
+// adding javascript to the start button using click and grabbing the questions container, using its id to remove the hide class and then adding the hide class for the start button so that it dissappears after it is clicked //
 var startBtn = document.getElementById("start-btn")
 startBtn.addEventListener("click", function() {
     var questionsCon = document.getElementById("questionsCon");
@@ -40,7 +43,7 @@ startBtn.addEventListener("click", function() {
 
     startBtn.classList.add("hide");
 
-    generateQuestion (1)
+    generateQuestion (0)
 
 })
 
@@ -60,5 +63,22 @@ function generateQuestion(index) {
     var btn4= document.getElementById("answer-4");
     btn4.textContent = questions[index].choices[3];
 
-    
+
 }
+
+// variables that change over time //
+var lastQuestion = question.length - 1;
+var runningQuestion = 0;
+var timeLeft = 0;
+var stop_timer = false;
+
+Timer.textContent = "Time: " + timeLeft;
+
+//Button clicks //
+start_btn.addEventListener("click", click_start);
+submit_btn.addEventListener("click", adding_high_scores);
+go_back_button.addEventListener("click", back_to_start);
+clear_button.addEventListener("click", clear_high_scores);
+view_high_score.addEventListener("click", create_high_score_page);
+
+// functions //
