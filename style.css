@@ -111,8 +111,28 @@ button {
     text-align: center;
 }
 
+#submit, #go_back, #clear {
+    font-size: 14px;
+    padding: 8px 18px;
+    text-align: center;
+    border-radius: 10px;
+}
+
 .hide {
     display: none;
+}
+
+/*questions and answer section*/
+#questionCon {
+    display: flex;
+    flext-direction: column;
+    padding: 60px 20px 30px 30px;
+}
+
+#question {
+    text-align: center;
+    padding-top: 0px;
+    color:hsl(0, 0%, 0%);
 }
 
 .choices {
