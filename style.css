@@ -3,22 +3,83 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.body {
-    padding: 0;
+html, body, .container {
+    height: 100%;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 100 vw;
-    align-items: center;
+    padding: 0;
 }
 
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: whitesmoke; 
+}
+
+/* timer and high score */
+#timer {
+    float: right;
+    margin: 10px 20px 0 0;
+}
+
+#view_high_score {
+    float: left;
+    cursor: pointer;
+    color:rgb(179, 87, 255);
+    margin: 10px 0 0 20px;
+}
+
+/* the content of the quiz */
 .container {
-    background-color: lightgray;
-    border-radius: 5px;
-    padding: 10px;
-    width: 800px;
-    max-width: 80%;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.container p {
+    padding: 30px 40px;
+    margin: 0 auto;
+    max-width: 900px;
+    font-size: 20px;
+    color: hsl(0, 0%, 0%);
+}
+
+header {
+    color: hsl(0, 0%, 0%)
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.card-header::after {
+    content: " ";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: lightpink;
+}
+
+/* start button */
+.start-btn {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: lightpink; 
+}
+
+/* all the other buttons */
+button {
+    cursor: pointer;
+    margin: 16px 16px 16px 20px;
+    display: inline-block;
+    border: none;
+    background-color: rgb(61, 3, 128);
+    color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+.btn:hover {
+    border-color: black;
 }
 
 .btn-grid {
@@ -28,21 +89,26 @@
 }
 
 .btn {
-    border: 1px solid cornflowerblue;
-    background-color: lightsalmon;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: black;
+    padding: 14px 34px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 24px;
 }
 
-.btn:hover {
-    border-color: black;
+/*answer button*/
+.btn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px 90px;
+    width: 50%;
 }
-
 .start-btn, .next-btn, .submit-btn {
     font-size: large;
     font-weight: bold;
-    padding: 20px 70px;
+    padding: 20px 70px 20px 70px;
+    text-align: center;
 }
 
 .hide {
