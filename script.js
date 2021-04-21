@@ -1,5 +1,6 @@
 // variable elements //
-
+var timer = document.getElementById(timer);
+var view_high
 
 // variable arrays for questions //
 var questions = [
@@ -72,7 +73,7 @@ var runningQuestion = 0;
 var timeLeft = 0;
 var stop_timer = false;
 
-Timer.textContent = "Time: " + timeLeft;
+timer.textContent = "time: " + timeLeft;
 
 //Button clicks //
 start_btn.addEventListener("click", click_start);
