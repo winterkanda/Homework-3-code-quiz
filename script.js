@@ -23,8 +23,11 @@ var runningQuestion = 0;
 var questions = [
     {
         title: "Question 1: Arrays in Javascript can be used to store ________.",
-        choices: ["numbers & strings", "other arrays", "booleans", "all of the above"], 
-        correct: "all of the above"
+        answer1: "numbers & strings",
+        answer2: "other arrays",
+        answer3: "booleans",
+        answer4: "all of the above",
+        correct: "answer4"
     },
 
     {
@@ -67,12 +70,11 @@ startBtn.addEventListener("click", function() {
 
 })
 
-var answerBtns = document.getElementsByClassName("btn")
-for (var i = 0; i < answerBtns.length; i++) {
-    answerBtns[i].addEventListener("click", function(){
-        alert("I picked an answer")
-    })
-}
+// var answerBtns = document.getElementsByClassName("btn")
+// for (var i = 0; i < answerBtns.length; i++) {
+//     answerBtns[i].addEventListener("click", function()
+//     })
+// }
 
 function generateQuestion(index) {
     var questionEl= document.getElementById("question");
