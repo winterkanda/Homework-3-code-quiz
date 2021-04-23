@@ -4,10 +4,6 @@ var view_high_score = document.getElementById("view_high_score");
 var startBtn = document.getElementById("start-btn");
 var questionsCon = document.getElementById("questionsCon");
 var question = document.getElementById("question");
-var answer1 = document.getElementById("answer-1");
-var answer2 = document.getElementById("answer-2");
-var answer3 = document.getElementById("answer-3");
-var answer4 = document.getElementById("answer-4");
 var results = document.getElementById("results");
 var final_score = document.getElementById("final_score");
 var initials = document.getElementById("initials");
@@ -18,6 +14,7 @@ var go_back = document.getElementById("go_back");
 var clear = document.getElementById("clear");
 var lastQuestion = question.length - 1;
 var runningQuestion = 0;
+var answerButtons = document.getElementById("answer-buttons");
 
 // variable arrays for questions //
 var questions = [
@@ -67,11 +64,7 @@ startBtn.addEventListener("click", function() {
 
 })
 
-// var answerBtns = document.getElementsByClassName("btn")
-// for (var i = 0; i < answerBtns.length; i++) {
-//     answerBtns[i].addEventListener("click", function()
-//     })
-// }
+// var answerButtons = document.getElementsByClassName("btn")
 
 function generateQuestion(index) {
     var questionEl= document.getElementById("question");
@@ -89,10 +82,16 @@ function generateQuestion(index) {
     var btn4= document.getElementById("answer-4");
     btn4.textContent = questions[index].choices[3];
 
+    var button = document.querySelectorAll("btn");
+    button.eventlistener("click", checkAnswer())
 
 }
 
-function checkAnswer(answer) {
+function checkAnswer() {
+    console.log(btn)
+
+    console.log(answer)
+
     if (answer === questions[runningQuestion].correct) {
         console.log("correct");
     }
