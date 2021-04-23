@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css">
-    <title>Code Quiz</title>  
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Code Quiz</title>
+  </head>
 
-<body>
-
+  <body>
     <!--view high scores and the timer-->
     <div id="timer">Time:</div>
     <div id="view_high_score">View High Scores</div>
 
     <!--how the quiz looks like, instructions, etc-->
-    <div class= "container">
+    <div class="container">
+      <header>
+        <h1>Coding Quiz Challenge</h1>
+      </header>
 
-        <header>
-            <h1>Coding Quiz Challenge</h1>
-        </header>
+      <p>
+        Try to answer the following code-related questions within the time
+        limit. Keep in mind that incorrect answers will penalize your score/time
+        by ten seconds!
+      </p>
 
-        <p>
-            Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
-        </p>
-
-        <!--start quiz button-->
-        <button id="start-btn" class="start-btn">Start Quiz</button>
+      <!--start quiz button-->
+      <button id="start-btn" class="start-btn">Start Quiz</button>
     </div>
-        
-        <!--the questions of the quiz-->
-        <div id="questionsCon" class="hide">
-            <div id="question">Question</div>
-            
 
-            <!--answer buttons to the-->
-            <div id="answer-buttons" class="btn-grid">
-                <button id="answer-1" class='btn'>Answer 1</button>
-                <button id="answer-2" class='btn'>Answer 2</button>
-                <button id="answer-3" class='btn'>Answer 3</button>
-                <button id="answer-4" class='btn'>Answer 4</button>
-            </div>
+    <!--the questions of the quiz-->
+    <div id="questionsCon" class="hide">
+      <div id="question">Question</div>
 
-            <!--final results, or score of the quiz-->
-            <div id="results" class = "hide">
-                <div>All done! Great job!</div>
-                <div id="final_score"></div>
-                <p><strong>Enter Initials:</strong>
-                    <input type="text" id="initials" name="player_initials" placeholder="initials here please" />
-                    <button id="submit">Submit</button>
-                </p>
-            </div>
+      <!--answer buttons to the-->
+      <div id="answer-buttons" class="btn-grid">
+        <button id="answer-1" class="btn">Answer 1</button>
+        <button id="answer-2" class="btn">Answer 2</button>
+        <button id="answer-3" class="btn">Answer 3</button>
+        <button id="answer-4" class="btn">Answer 4</button>
+      </div>
+    </div>
 
-        </div>
+    <!--final results, or score of the quiz-->
+    <div id="results" class="hide">
+      <div>All done! Great job!</div>
+      <div id="final_score"></div>
+      <p>
+        <strong>Enter Initials:</strong>
+        <input
+          type="text"
+          id="initials"
+          name="player_initials"
+          placeholder="initials here please"
+        />
+        <button id="submit">Submit</button>
+      </p>
+    </div>
     
-        <!--High scores section-->
-        <div id="high_scores" class="hide">
-            <div>High Scores</div>
-            <ol id="list_scores"></ol>
-            <button id="go_back">Go Back</button>
-            <button id="clear">Clear High Scores</button>
-        </div>
-       
+    <!--High scores section-->
+    <div id="high_scores" class="hide">
+      <div>High Scores</div>
+      <ol id="list_scores"></ol>
+      <button id="go_back">Go Back</button>
+      <button id="clear">Clear High Scores</button>
+    </div>
+
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
-
-
-

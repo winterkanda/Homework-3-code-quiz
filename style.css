@@ -121,8 +121,8 @@ button {
 
 /*questions and answer section*/
 #questionCon {
-    display: flex;
-    flext-direction: column;
+    /* display: flex; */
+    flex-direction: column;
     padding: 60px 20px 30px 30px;
 }
 
@@ -136,12 +136,12 @@ button {
 #results {
     flex-direction: column;
     padding: 60px 20px 30px 30px;
-    display: flex;
+    /* display: flex; */
 }
 
 /*high score section*/
 #high_scores {
-    display: flex;
+    /* display: flex; */
     padding: 60px 20px 30px 30px;
     flex-direction: column;
     align-items: center; 

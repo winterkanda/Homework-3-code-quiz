@@ -1,6 +1,23 @@
 // variable elements //
-var timer = document.getElementById(timer);
-var view_high
+var timer = document.getElementById("timer");
+var view_high_score = document.getElementById("view_high_score");
+var startBtn = document.getElementById("start-btn");
+var questionsCon = document.getElementById("questionsCon");
+var question = document.getElementById("question");
+var answer1 = document.getElementById("answer-1");
+var answer2 = document.getElementById("answer-2");
+var answer3 = document.getElementById("answer-3");
+var answer4 = document.getElementById("answer-4");
+var results = document.getElementById("results");
+var final_score = document.getElementById("final_score");
+var initials = document.getElementById("initials");
+var submitBtn = document.getElementById("submit");
+var high_scores = document.getElementById("high_scores");
+var list_scores = document.getElementById("list_scores");
+var go_back = document.getElementById("go_back");
+var clear = document.getElementById("clear");
+var lastQuestion = question.length - 1;
+var runningQuestion = 0;
 
 // variable arrays for questions //
 var questions = [
@@ -42,11 +59,20 @@ startBtn.addEventListener("click", function() {
     var questionsCon = document.getElementById("questionsCon");
     questionsCon.classList.remove("hide");
 
-    startBtn.classList.add("hide");
+    var container = document.querySelector(".container")
+    container.classList.add("hide");
 
+    
     generateQuestion (0)
 
 })
+
+var answerBtns = document.getElementsByClassName("btn")
+for (var i = 0; i < answerBtns.length; i++) {
+    answerBtns[i].addEventListener("click", function(){
+        alert("I picked an answer")
+    })
+}
 
 function generateQuestion(index) {
     var questionEl= document.getElementById("question");
@@ -67,19 +93,49 @@ function generateQuestion(index) {
 
 }
 
+function checkAnswer(answer) {
+    if (answer === questions[runningQuestion].correct) {
+        console.log("correct");
+    }
+
+    else {
+        console.log("wrong");
+    }
+
+    if (runningQuestion < lastQuestion) {
+        runningQuestion++;
+        generateQuestion(runningQuestion);
+    }
+
+    else {
+        return results;
+    }
+}
+
 // variables that change over time //
-var lastQuestion = question.length - 1;
-var runningQuestion = 0;
 var timeLeft = 0;
 var stop_timer = false;
 
 timer.textContent = "time: " + timeLeft;
 
 //Button clicks //
-start_btn.addEventListener("click", click_start);
-submit_btn.addEventListener("click", adding_high_scores);
-go_back_button.addEventListener("click", back_to_start);
-clear_button.addEventListener("click", clear_high_scores);
-view_high_score.addEventListener("click", create_high_score_page);
+// go_back_button.addEventListener("click", back_to_start);
+// clear_button.addEventListener("click", clear_high_scores);
+// view_high_score.addEventListener("click", create_high_score_page);
 
 // functions //
+
+// timer //
+// funtion tikTok() {
+
+//     if (stop_timer === false) {
+//         if (timeLeft >= 1){
+//             timer.textContent = "Time: " + timeLeft;
+//             timeLeft--;
+//         }
+//         else if(timeLeft === 0) {
+//             timer.textContent = "Time: " + timeLeft;
+//             score_render();
+//         }
+//     }
+// }
