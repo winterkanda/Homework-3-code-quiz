@@ -12,9 +12,14 @@ var high_scores = document.getElementById("high_scores");
 var list_scores = document.getElementById("list_scores");
 var go_back = document.getElementById("go_back");
 var clear = document.getElementById("clear");
-var lastQuestion = question.length - 1;
 var runningQuestion = 0;
 var answerButtons = document.getElementById("answer-buttons");
+var btn1= document.getElementById("answer-1");
+var btn2= document.getElementById("answer-2");
+var btn3= document.getElementById("answer-3");
+var btn4= document.getElementById("answer-4");
+var buttons = document.querySelectorAll(".btn");
+var start = 
 
 // variable arrays for questions //
 var questions = [
@@ -33,7 +38,7 @@ var questions = [
     {
         title: "Question 3: A very useful tool during the development and debugging for printing content is to the debugger is: ",
         choices: ["javascript", "for loops", "console.log", "terminal/bash"], 
-        correct: "for loops"
+        correct: "console.log"
     },
 
     {
@@ -49,56 +54,56 @@ var questions = [
     }
 
 ];
-    
+
+var lastQuestion = questions.length - 1;
+
+
 // adding javascript to the start button using click and grabbing the questions container, using its id to remove the hide class and then adding the hide class for the start button so that it dissappears after it is clicked //
-var startBtn = document.getElementById("start-btn")
-startBtn.addEventListener("click", function() {
+    console.log(startBtn)
+    var startBtn = document.getElementById("start-btn")
+startBtn.addEventListener("click", function() 
+    {displayQuestion(runningQuestion)
+
+    function displayQuestion() {
     var questionsCon = document.getElementById("questionsCon");
     questionsCon.classList.remove("hide");
 
     var container = document.querySelector(".container")
     container.classList.add("hide");
-
+    }
     
-    generateQuestion (0)
+    generateQuestion (runningQuestion)
 
 })
 
-// var answerButtons = document.getElementsByClassName("btn")
+// var answerButtons = document.getElementsByClass
 
 function generateQuestion(index) {
     var questionEl= document.getElementById("question");
     questionEl.textContent = questions[index].title
     
-    var btn1= document.getElementById("answer-1");
+    
     btn1.textContent = questions[index].choices[0];
 
-    var btn2= document.getElementById("answer-2");
     btn2.textContent = questions[index].choices[1];
 
-    var btn3= document.getElementById("answer-3");
     btn3.textContent = questions[index].choices[2];
 
-    var btn4= document.getElementById("answer-4");
     btn4.textContent = questions[index].choices[3];
-
-    var button = document.querySelectorAll("btn");
-    button.eventlistener("click", checkAnswer())
 
 }
 
-function checkAnswer() {
-    console.log(btn)
 
-    console.log(answer)
+function checkAnswer(userChoice) {
 
-    if (answer === questions[runningQuestion].correct) {
+    if (userChoice === questions[runningQuestion].correct) {
         console.log("correct");
     }
 
     else {
         console.log("wrong");
     }
+        console.log("running",runningQuestion, lastQuestion)
 
     if (runningQuestion < lastQuestion) {
         runningQuestion++;
@@ -106,7 +111,7 @@ function checkAnswer() {
     }
 
     else {
-        return results;
+        results.classList.toggle("hide");
     }
 }
 
@@ -137,3 +142,11 @@ timer.textContent = "time: " + timeLeft;
 //         }
 //     }
 // }
+
+for (let i=0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function(e){
+        console.log(e.target.innerText)
+
+        checkAnswer(e.target.innerText)
+    })
+}
