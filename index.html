@@ -9,7 +9,7 @@
   <body>
     <!--view high scores and the timer-->
     <div id="timer">Time:</div>
-    <div id="view_high_score">View High Scores</div>
+    <div id="view_high_score"><a href="scores.html">View High Scores</a></div>
 
     <!--how the quiz looks like, instructions, etc-->
     <div class="container">
@@ -40,6 +40,8 @@
       </div>
     </div>
 
+    
+
     <!--final results, or score of the quiz-->
     <div id="results" class="hide">
       <div>All done! Great job!</div>
@@ -56,13 +58,9 @@
       </p>
     </div>
     
-    <!--High scores section-->
-    <div id="high_scores" class="hide">
-      <div>High Scores</div>
-      <ol id="list_scores"></ol>
-      <button id="go_back">Go Back</button>
-      <button id="clear">Clear High Scores</button>
-    </div>
+    <!---container to show if question is answered incorrectly/correctly-->
+    <div id="questionClick"></div>
+
 
     <script src="./script.js"></script>
   </body>

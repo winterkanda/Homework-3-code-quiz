@@ -74,6 +74,10 @@ button {
     border-radius: 20px;
 }
 
+button > a {
+ color: white;
+}
+
 .btn:hover {
     border-color: black;
 }
@@ -172,4 +176,8 @@ li:nth-child(odd) {
     .btn {
         font-size: 0.9rem;
     }
+}
+
+a {
+    text-decoration: none;
 }
