@@ -13,9 +13,8 @@ This application is a timed coding quiz with multiple-choice questions, featurin
 &nbsp;
 
 
-
 ## Live Website
-
+https://winterkanda.github.io/Homework-4-code-quiz/
 
 
 
@@ -25,7 +24,5 @@ This application is a timed coding quiz with multiple-choice questions, featurin
 ## Contribution Guidelines
 
 Made by Winter Kanda 
-
-Open to all
 
 @2021 Copyright
