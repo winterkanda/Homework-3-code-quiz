@@ -1,0 +1,20 @@
+{
+  "name": "homework-4-code-quiz",
+  "version": "1.0.0",
+  "description": "## Description This application is a timed coding quiz with multiple-choice questions, featuring HTML, CSS, JavaScript code with a responsive user interface. It deducts 10 points away for every question answered incorrect and it will record the user's high scores while it runs in the browser.",
+  "main": "scores.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winterkanda/Homework-3-code-quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/winterkanda/Homework-3-code-quiz/issues"
+  },
+  "homepage": "https://github.com/winterkanda/Homework-3-code-quiz#readme"
+}
